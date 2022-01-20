@@ -1,3 +1,14 @@
-[Log in to Power BI](https://app.powerbi.com/home)
+### My Power BI reports aren't showing
 
-*Use CTRL+Click or right-click>"Open in a new tab" with this link if the "Sign-in" button for Power BI is not working. After you log in, return to your dashboard and the Power BI reports tile should automatically detect that you are logged in and show the intended reports.*
+If your dashboard tile looks like this
+
+![PowerBISignInScreen]
+
+but nothing happens when you click the "Sign-In" button, right click this button instead [![PowerBISignInScreen]](https://app.powerbi.com/home) and select "Open in new tab/window". Once you are logged in on the new tab/window, the report will automatically sign-in and update here on your dashboard.
+  *Note: Once signed-in, you don't need to keep the other browser tab/window open in order to stay signed-in on the dashboard.*
+
+### I have other questions about Prophix
+
+You can open the [Prophix help page here](https://help.prophix.cloud/) or email [Mathew Smith](mailto:msmith@gpsfx.com) for GPS-specific Prophix questions.
+
+[PowerBISignInScreen]: https://community.powerbi.com/t5/image/serverpage/image-id/207120iC9DB8EAD985AA83E/image-size/large?v=v2&px=999 "Power BI Sign In Page"
