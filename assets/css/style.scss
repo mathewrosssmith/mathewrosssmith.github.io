@@ -3,6 +3,12 @@
 
 @import "{{ site.theme }}";
 
-details summary > * {
+details > summary {
+  background-color: #f9c700;
+  cursor: pointer;
+  padding: .5rem 1rem;
+}
+
+details > summary > * {
   display: inline;
 }
