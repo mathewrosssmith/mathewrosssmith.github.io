@@ -12,4 +12,4 @@ but nothing happens when you click the "Sign-In" button, right click this button
 You can open the [Prophix help page here](https://help.prophix.cloud/) or email [Mathew Smith](mailto:msmith@gpsfx.com) for GPS-specific Prophix questions.
 
 [PowerBISignInScreen]: assets/img/PowerBISignInScreen.png "Power BI Sign-In Screen"
-[PowerBISignInButton]: assets/img/PowerBISignInButton.png "Power BI Sign-In Button"
+[PowerBISignInButton]: assets/img/PowerBISignInButton_100x45.png "Power BI Sign-In Button"
