@@ -4,7 +4,7 @@
  
  <p>If your dashboard tile looks like this...</p>
 <img src="assets/img/PowerBISignInScreen.png" style="display: inline-block;"/>
- <p>...but nothing happens when you click the "Sign-In" button, <strong>right-click</strong> this button instead <a href="https://app.powerbi.com/home"><img src="assets/img/PowerBISignInButton_100x45.png"/></a> and select "Open link in new tab/window". (Alternatively, CTRL+click on windows or CMD+click on a Mac should accomplish the same thing.)
+ <p>...but nothing happens when you click the "Sign-In" button, <strong>right-click</strong> this button instead <a href="https://app.powerbi.com/home" target="_blank"><img src="assets/img/PowerBISignInButton_100x45.png"/></a> and select "Open link in new tab/window". (Alternatively, CTRL+click on windows or CMD+click on a Mac should accomplish the same thing.)
 <br /><br />
 Once you are logged in on the new tab/window, the report should automatically sign-in and update here on your dashboard. To force this to occur immediately, simply refresh the tile by clicking the "..." in the top-right corner and selecting "Refresh" from the drop-down menu.
 <br />
