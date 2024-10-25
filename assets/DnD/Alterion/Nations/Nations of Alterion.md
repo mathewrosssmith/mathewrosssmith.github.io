@@ -6,16 +6,135 @@ The following are the primary nations that exist on the world of Alterion since 
 
 ## Thendula
 
+| National Banner | Map |
+|-|-|
+| ![][flagThendula] | ![][mapNaturalThendula] |
+
+![][mapNaturalThendula]
+![][mapNaturalDemu]
+![][mapNaturalDalthomar]
+![][mapNaturalSalandor]
+![][mapNaturalLulinstalik]
+![][mapNaturalKalaondonaire]
+![][mapNaturalRakishstaan]
+![][mapNaturalLulin]
+
+
 |||
 |-|-|
 | Official Name | United Thendulan States |
 | Common Name | Thendula |
-| Flag | ![][flagThendula] |
 | Government Structure | United States - Constitutional Republic |
 | Timezone Offsets | +11,+12 |
 | Primary Surge | Transmutation |
 | Surge Times (Local) | 10am - 3pm |
 
 
+## Demu
+
+|||
+|-|-|
+| Official Name | ... |
+| Common Name | ... |
+| Flag | ![][flagDemu] |
+| Government Structure | ... - ... |
+| Timezone Offsets | ... |
+| Primary Surge | ... |
+| Surge Times (Local) | ... |
+
+
+## Dalthomar
+
+|||
+|-|-|
+| Official Name | ... |
+| Common Name | ... |
+| Flag | ![][flagDalthomar] |
+| Government Structure | ... - ... |
+| Timezone Offsets | ... |
+| Primary Surge | ... |
+| Surge Times (Local) | ... |
+
+
+## Salan'dor
+
+|||
+|-|-|
+| Official Name | ... |
+| Common Name | ... |
+| Flag | ![][flagSalandor] |
+| Government Structure | ... - ... |
+| Timezone Offsets | ... |
+| Primary Surge | ... |
+| Surge Times (Local) | ... |
+
+
+## Lulin'stalik
+
+|||
+|-|-|
+| Official Name | ... |
+| Common Name | ... |
+| Flag | ![][flagLulinstalik] |
+| Government Structure | ... - ... |
+| Timezone Offsets | ... |
+| Primary Surge | ... |
+| Surge Times (Local) | ... |
+
+
+## Kala'ondonaire
+
+|||
+|-|-|
+| Official Name | ... |
+| Common Name | ... |
+| Flag | ![][flagKalaondonaire] |
+| Government Structure | ... - ... |
+| Timezone Offsets | ... |
+| Primary Surge | ... |
+| Surge Times (Local) | ... |
+
+
+## Rakishstaan
+
+|||
+|-|-|
+| Official Name | ... |
+| Common Name | ... |
+| Flag | ![][flagRakishstaan] |
+| Government Structure | ... - ... |
+| Timezone Offsets | ... |
+| Primary Surge | ... |
+| Surge Times (Local) | ... |
+
+
+## Lulin
+
+|||
+|-|-|
+| Official Name | ... |
+| Common Name | ... |
+| Flag | ![][flagLulin] |
+| Government Structure | ... - ... |
+| Timezone Offsets | ... |
+| Primary Surge | ... |
+| Surge Times (Local) | ... |
+
 <!-- Reference Style Links Below -->
-[flagThendula]: banners/thendula.png
+[flagThendula]: banners/thendula.svg
+[flagDemu]: banners/demu.svg
+[flagDalthomar]: banners/dalthomar.svg
+[flagSalandor]: banners/salan_dor.svg
+[flagLulinstalik]: banners/lulin_stalik.svg
+[flagKalaondonaire]: banners/kala_ondonaire.svg
+[flagRakishstaan]: banners/rakishstaan.svg
+[flagLulin]: banners/lulin.svg
+
+[mapNaturalThendula]: mapImgs/thendula.png
+[mapNaturalDemu]: mapImgs/demu.png
+[mapNaturalDalthomar]: mapImgs/dalthomar.png
+[mapNaturalSalandor]: mapImgs/salan_dor.png
+[mapNaturalLulinstalik]: mapImgs/lulin_stalik.png
+[mapNaturalKalaondonaire]: mapImgs/kala_ondonaire.png
+[mapNaturalRakishstaan]: mapImgs/rakishstaan.png
+[mapNaturalLulin]: mapImgs/lulin.png
