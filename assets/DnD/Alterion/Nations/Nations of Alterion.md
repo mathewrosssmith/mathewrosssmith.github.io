@@ -18,4 +18,4 @@ The following are the primary nations that exist on the world of Alterion since 
 
 
 <!-- Reference Style Links Below -->
-[flagThendula]: /banners/tbd.svg
+[flagThendula]: banners/thendula.png
