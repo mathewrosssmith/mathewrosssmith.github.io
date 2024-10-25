@@ -130,11 +130,13 @@ The following are the primary nations that exist on the world of Alterion since 
 [flagRakishstaan]: banners/rakishstaan.svg
 [flagLulin]: banners/lulin.svg
 
-[mapNaturalThendula]: mapImgs/thendula.png
-[mapNaturalDemu]: mapImgs/demu.png
-[mapNaturalDalthomar]: mapImgs/dalthomar.png
-[mapNaturalSalandor]: mapImgs/salan_dor.png
-[mapNaturalLulinstalik]: mapImgs/lulin_stalik.png
-[mapNaturalKalaondonaire]: mapImgs/kala_ondonaire.png
-[mapNaturalRakishstaan]: mapImgs/rakishstaan.png
-[mapNaturalLulin]: mapImgs/lulin.png
+[mapNaturalThendula]: mapImgs/physical_thendula.png
+[mapNaturalDemu]: mapImgs/physical_demu.png
+[mapNaturalDalthomar]: mapImgs/physical_dalthomar.png
+[mapNaturalSalandor]: mapImgs/physical_salan_dor.png
+[mapNaturalLulinstalik]: mapImgs/physical_lulin_stalik.png
+[mapNaturalKalaondonaire]: mapImgs/physical_kala_ondonaire.png
+[mapNaturalRakishstaan]: mapImgs/physical_rakishstaan.png
+[mapNaturalLulin]: mapImgs/physical_lulin.png
+![image](https://github.com/user-attachments/assets/e0aaa934-5a8a-4700-a131-feaa39e0c08d)
+
