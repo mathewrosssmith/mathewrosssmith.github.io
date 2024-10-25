@@ -1,4 +1,4 @@
-<a href="assets/Alterion.map" >Alterion Map</a>
+<a href="assets/DnD/Alterion/Alterion.map" >Alterion Map</a>
 
 <details>
  <summary><h3>My Power BI reports aren't showing</h3></summary>
