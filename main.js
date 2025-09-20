@@ -272,7 +272,7 @@ async function checkLoadParameters() {
   const params = url.searchParams;
 
   // of there is a valid maplink, try to load .map/.gz file from URL
-  if (params.get("maplink")) {
+  //if (params.get("maplink")) {
     WARN && console.warn("Load map from URL");
     var maplink = params.get("maplink");
     if (!maplink) {
@@ -286,7 +286,7 @@ async function checkLoadParameters() {
       }, 1000);
       return;
     } else showUploadErrorMessage("Map link is not a valid URL", maplink);
-  }
+  //}
 
   // if there is a seed (user of MFCG provided), generate map for it
   if (params.get("seed")) {
