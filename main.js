@@ -9,7 +9,7 @@ const INFO = true;
 const TIME = true;
 const WARN = true;
 const ERROR = true;
-const DEFAULT_MAP = "https://mathewrosssmith.github.io/maps/Alterion.map"
+const DEFAULT_MAP = "https://raw.githubusercontent.com/mathewrosssmith/mathewrosssmith.github.io/refs/heads/master/maps/Alterion.map"
 
 // detect device
 const MOBILE = window.innerWidth < 600 || navigator.userAgentData?.mobile;
@@ -275,10 +275,10 @@ async function checkLoadParameters() {
   //if (params.get("maplink")) {
     WARN && console.warn("Load map from URL");
     var maplink = params.get("maplink");
+    const pattern = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
     if (!maplink) {
       let maplink = DEFAULT_MAP;
     }
-    const pattern = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
     const valid = pattern.test(maplink);
     if (valid) {
       setTimeout(() => {
