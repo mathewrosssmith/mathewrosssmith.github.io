@@ -389,7 +389,7 @@ async function parseLoadedData(data, mapVersion) {
       pack.religions = data[29] ? JSON.parse(data[29]) : [{i: 0, name: "No religion"}];
       pack.provinces = data[30] ? JSON.parse(data[30]) : [0];
       pack.rivers = data[32] ? JSON.parse(data[32]) : [];
-      pack.markers = false ? JSON.parse(data[35]) : [];//data[35] ? JSON.parse(data[35]) : [];
+      pack.markers = [];//data[35] ? JSON.parse(data[35]) : [];
       pack.routes = data[37] ? JSON.parse(data[37]) : [];
       pack.zones = data[38] ? JSON.parse(data[38]) : [];
       pack.cells.biome = Uint8Array.from(data[16].split(","));
