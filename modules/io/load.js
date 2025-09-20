@@ -269,7 +269,7 @@ async function parseLoadedData(data, mapVersion) {
 
     {
       if (data[2]) mapCoordinates = JSON.parse(data[2]);
-      if (data[4]) notes = JSON.parse(data[4]).filter(item => not item.id.startsWith("marker"));
+      if (data[4]) notes = JSON.parse(data[4]).filter(item => item.id.toString().startsWith("marker") == false);
       if (data[33]) rulers.fromString(data[33]);
       if (data[34]) {
         const usedFonts = JSON.parse(data[34]);
