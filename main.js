@@ -9,6 +9,7 @@ const INFO = true;
 const TIME = true;
 const WARN = true;
 const ERROR = true;
+const DEFAULT_MAP = "https://github.com/mathewrosssmith/mathewrosssmith.github.io/maps/Alterion.map"
 
 // detect device
 const MOBILE = window.innerWidth < 600 || navigator.userAgentData?.mobile;
@@ -273,7 +274,10 @@ async function checkLoadParameters() {
   // of there is a valid maplink, try to load .map/.gz file from URL
   if (params.get("maplink")) {
     WARN && console.warn("Load map from URL");
-    const maplink = params.get("maplink");
+    var maplink = params.get("maplink");
+    if (!maplink) {
+      let maplink = DEFAULT_MAP;
+    }
     const pattern = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
     const valid = pattern.test(maplink);
     if (valid) {
