@@ -351,6 +351,7 @@ async function parseLoadedData(data, mapVersion) {
       anchors = icons.select("#anchors");
       armies = viewbox.select("#armies");
       markers = viewbox.select("#markers");
+      markers.selectAll("g").remove(); // Remove all children from markers
       ruler = viewbox.select("#ruler");
       fogging = viewbox.select("#fogging");
       debug = viewbox.select("#debug");
@@ -383,6 +384,8 @@ async function parseLoadedData(data, mapVersion) {
       reGraph();
       Features.markupPack();
       pack.features = JSON.parse(data[12]);
+      console.log("features incoming");
+      console.log(pack.features);
       pack.cultures = JSON.parse(data[13]);
       pack.states = JSON.parse(data[14]);
       pack.burgs = JSON.parse(data[15]);
