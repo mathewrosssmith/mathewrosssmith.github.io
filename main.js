@@ -277,7 +277,7 @@ async function checkLoadParameters() {
     var maplink = params.get("maplink");
     const pattern = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
     if (!maplink) {
-      let maplink = DEFAULT_MAP;
+      maplink = DEFAULT_MAP;
     }
     const valid = pattern.test(maplink);
     if (valid) {
