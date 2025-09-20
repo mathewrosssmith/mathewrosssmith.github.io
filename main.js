@@ -275,14 +275,16 @@ async function checkLoadParameters() {
   //if (params.get("maplink")) {
     WARN && console.warn("Load map from URL");
     const pattern = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
-    var maplinkValue;
-    if (params.get("maplink")) {
-      maplinkValue = params.get("maplink");
-    }
-    else {
-      maplinkValue = DEFAULT_MAP;
-    }
-    const maplink = maplinkValue;
+    //var maplinkValue;
+    //if (params.get("maplink")) {
+    //  maplinkValue = params.get("maplink");
+    //}
+    //else {
+    //  maplinkValue = DEFAULT_MAP;
+    //}
+    //const maplink = maplinkValue;
+    const maplink = DEFAULT_MAP;
+    console.log(maplink);
     const valid = pattern.test(maplink);
     if (valid) {
       setTimeout(() => {
