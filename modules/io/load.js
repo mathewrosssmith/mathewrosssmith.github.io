@@ -351,7 +351,7 @@ async function parseLoadedData(data, mapVersion) {
       anchors = icons.select("#anchors");
       armies = viewbox.select("#armies");
       markers = viewbox.select("#markers");
-      markers.selectAll("g").remove(); // Remove all children from markers
+      markers.selectAll("*").remove(); // Remove all children from markers
       ruler = viewbox.select("#ruler");
       fogging = viewbox.select("#fogging");
       debug = viewbox.select("#debug");
