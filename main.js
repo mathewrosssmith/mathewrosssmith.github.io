@@ -9,7 +9,7 @@ const INFO = true;
 const TIME = true;
 const WARN = true;
 const ERROR = true;
-const DEFAULT_MAP = "https://github.com/mathewrosssmith/mathewrosssmith.github.io/maps/Alterion.map"
+const DEFAULT_MAP = "https://mathewrosssmith.github.io/maps/Alterion.map"
 
 // detect device
 const MOBILE = window.innerWidth < 600 || navigator.userAgentData?.mobile;
