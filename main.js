@@ -274,11 +274,15 @@ async function checkLoadParameters() {
   // of there is a valid maplink, try to load .map/.gz file from URL
   //if (params.get("maplink")) {
     WARN && console.warn("Load map from URL");
-    var maplink = params.get("maplink");
     const pattern = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
-    if (!maplink) {
-      maplink = DEFAULT_MAP;
+    var maplinkValue;
+    if (params.get("maplink")) {
+      maplinkValue = params.get("maplink");
     }
+    else {
+      maplinkValue = DEFAULT_MAP;
+    }
+    const maplink = maplinkValue;
     const valid = pattern.test(maplink);
     if (valid) {
       setTimeout(() => {
