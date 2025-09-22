@@ -351,6 +351,12 @@ async function parseLoadedData(data, mapVersion) {
       anchors = icons.select("#anchors");
       armies = viewbox.select("#armies");
       markers = viewbox.select("#markers");
+      let keptMarkers = data[35] ? JSON.parse(data[35]).filter(item => item?.pinned == true) : [];
+      console.log(keptMarkers);
+      // Remove filtered out parts of SVG
+      let keptMarkerIds = keptMarkers.map(a => "marker" + a.i);
+      console.log(keptMarkerIds);
+      markers.selectAll("*").filter((d) => !(keptMarkerIds.includes(d.id))).remove(); 
       //markers.selectAll("*").remove(); // Remove all children from markers
       ruler = viewbox.select("#ruler");
       fogging = viewbox.select("#fogging");
