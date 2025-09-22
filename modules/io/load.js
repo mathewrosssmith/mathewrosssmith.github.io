@@ -269,7 +269,7 @@ async function parseLoadedData(data, mapVersion) {
 
     {
       if (data[2]) mapCoordinates = JSON.parse(data[2]);
-      if (data[4]) notes = JSON.parse(data[4]).filter(item => item.id.toString().startsWith("marker") == false);
+      if (data[4]) notes = JSON.parse(data[4]).filter(item => item.id.toString().startsWith("marker") === false || item?.pinned == 1);
       if (data[33]) rulers.fromString(data[33]);
       if (data[34]) {
         const usedFonts = JSON.parse(data[34]);
@@ -351,7 +351,7 @@ async function parseLoadedData(data, mapVersion) {
       anchors = icons.select("#anchors");
       armies = viewbox.select("#armies");
       markers = viewbox.select("#markers");
-      markers.selectAll("*").remove(); // Remove all children from markers
+      //markers.selectAll("*").remove(); // Remove all children from markers
       ruler = viewbox.select("#ruler");
       fogging = viewbox.select("#fogging");
       debug = viewbox.select("#debug");
@@ -384,15 +384,16 @@ async function parseLoadedData(data, mapVersion) {
       reGraph();
       Features.markupPack();
       pack.features = JSON.parse(data[12]);
-      console.log("features incoming");
-      console.log(pack.features);
       pack.cultures = JSON.parse(data[13]);
       pack.states = JSON.parse(data[14]);
       pack.burgs = JSON.parse(data[15]);
       pack.religions = data[29] ? JSON.parse(data[29]) : [{i: 0, name: "No religion"}];
       pack.provinces = data[30] ? JSON.parse(data[30]) : [0];
       pack.rivers = data[32] ? JSON.parse(data[32]) : [];
-      pack.markers = [];//data[35] ? JSON.parse(data[35]) : [];
+      pack.markers = data[35] ? JSON.parse(data[35]).filter(item => item?.pinned == true) : [];
+      // Remove filtered out parts of SVG
+      let keptMarkerIds = pack.markers.map(a => "marker" + a.i);
+      markers.selectAll("*").filter((d, i) => !(keptMarkerIds.includes(d.id))).remove(); // Remove all non-pinned children from markers
       pack.routes = data[37] ? JSON.parse(data[37]) : [];
       pack.zones = data[38] ? JSON.parse(data[38]) : [];
       pack.cells.biome = Uint8Array.from(data[16].split(","));
