@@ -351,12 +351,9 @@ async function parseLoadedData(data, mapVersion) {
       anchors = icons.select("#anchors");
       armies = viewbox.select("#armies");
       markers = viewbox.select("#markers");
-      let keptMarkers = data[35] ? JSON.parse(data[35]).filter(item => item?.pinned == true) : [];
-      console.log(keptMarkers);
       // Remove filtered out parts of SVG
-      let keptMarkerIds = keptMarkers.map(a => "marker" + a.i);
-      console.log(keptMarkerIds);
-      markers.selectAll("*").filter((d) => !(keptMarkerIds.includes(d.id))).remove(); 
+      let keptMarkersIds = data[35] ? JSON.parse(data[35]).filter(item => item?.pinned == true).map(item => "marker" + item.i) : [];
+      markers.selectAll("*").filter(function() { return keptMarkerIds.indexOf(d3.select(this).attr('id')) === -1; }).remove();
       //markers.selectAll("*").remove(); // Remove all children from markers
       ruler = viewbox.select("#ruler");
       fogging = viewbox.select("#fogging");
@@ -397,9 +394,6 @@ async function parseLoadedData(data, mapVersion) {
       pack.provinces = data[30] ? JSON.parse(data[30]) : [0];
       pack.rivers = data[32] ? JSON.parse(data[32]) : [];
       pack.markers = data[35] ? JSON.parse(data[35]).filter(item => item?.pinned == true) : [];
-      // Remove filtered out parts of SVG
-      let keptMarkerIds = pack.markers.map(a => "marker" + a.i);
-      markers.selectAll("*").filter((d, i) => !(keptMarkerIds.includes(d.id))).remove(); // Remove all non-pinned children from markers
       pack.routes = data[37] ? JSON.parse(data[37]) : [];
       pack.zones = data[38] ? JSON.parse(data[38]) : [];
       pack.cells.biome = Uint8Array.from(data[16].split(","));
