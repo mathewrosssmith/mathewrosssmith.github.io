@@ -352,9 +352,11 @@ async function parseLoadedData(data, mapVersion) {
       armies = viewbox.select("#armies");
       markers = viewbox.select("#markers");
       // Remove filtered out parts of SVG
-      let keptMarkersIds = data[35] ? JSON.parse(data[35]).filter(item => item?.pinned == true).map(item => "marker" + item.i) : [];
-      markers.selectAll("*").filter(function() { return keptMarkerIds.indexOf(d3.select(this).attr('id')) === -1; }).remove();
+      let removeMarkersIds = data[35] ? JSON.parse(data[35]).filter(item => item?.pinned !== true).map(item => "#marker" + item.i) : [];
+      if (removeMarkersIds){
+        markers.selectAll(removeMarkersIds.join(',')).remove();
       //markers.selectAll("*").remove(); // Remove all children from markers
+      }
       ruler = viewbox.select("#ruler");
       fogging = viewbox.select("#fogging");
       debug = viewbox.select("#debug");
