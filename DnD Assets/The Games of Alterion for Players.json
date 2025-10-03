@@ -1,0 +1,258 @@
+{
+	"_meta": {
+		"sources": [
+			{
+				"json": "TheGamesofAlterionforPlayers",
+				"abbreviation": "GoAP",
+				"full": "The Games of Alterion for Players",
+				"version": "1",
+				"url": "https://drive.google.com/drive/folders/11-bTK2kxBRYOBJvsergHuNaygT_VfR-m?usp=sharing",
+				"authors": [
+					"Mathew Smith (MateoSpack)"
+				],
+				"convertedBy": [
+					"Mathew Smith (MateoSpack)"
+				]
+			}
+		]
+	},
+	"monster": [
+		{
+			"name": "Hjolgron Silentforge",
+			"source": "TheGamesofAlterionforPlayers",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"dwarf"
+				]
+			},
+			"alignment": null,
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item scale mail|phb}",
+						"{@item shield|xphb}"
+					]
+				},
+				{
+					"ac": 14,
+					"from": [
+						"{@item scale mail|xphb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "4d8 + 10",
+				"average": 28
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 16,
+			"dex": 11,
+			"con": 14,
+			"int": 11,
+			"wis": 10,
+			"cha": 9,
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 12,
+			"resist": [
+				"poison"
+			],
+			"languages": [
+				"Common",
+				"Dwarvish",
+				"Undercommon"
+			],
+			"trait": [
+				{
+					"name": "Duergar Resilience",
+					"entries": [
+						"The duergar has advantage on saving throws against poison, spells, and illusions, as well as to resist being {@condition charmed} or {@condition paralyzed}."
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"While in sunlight, the duergar has disadvantage on attack rolls, as well as on Wisdom ({@skill Perception}) checks that rely on sight."
+					]
+				},
+				{
+					"name": "Expert Lvl 1 - Helpful",
+					"entries": [
+						"The sidekick is adept at giving well-timed assistance; the sidekick can take the Help action as a bonus action."
+					]
+				},
+				{
+					"name": "Expert Lvl 2 - Cunning Action",
+					"entries": [
+						"The sidekick’s agility or quick thinking allows it to act speedily. On its turn in combat, it can take the Dash, Disengage, or Hide action as a bonus action."
+					]
+				},
+				{
+					"name": "Luckstone (when attuned)",
+					"entries": [
+						"Hjolgron carries with him a stone talisman, a gift from a friend who died to save him. It is a {@item Stone of Good Luck} and gives a +1 bonus to all ability checks and saving throws (not included in stat block)."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Enlarge (Recharges after a Short or Long Rest)",
+					"entries": [
+						"For 1 minute, the duergar magically increases in size, along with anything it is wearing or carrying. While enlarged, the duergar is Large, doubles its damage dice on Strength-based weapon attacks (included in the attacks), and makes Strength checks and Strength saving throws with advantage. If the duergar lacks the room to become Large, it attains the maximum size possible in the space available."
+					]
+				},
+				{
+					"name": "War Pick",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) piercing damage, or 12 ({@damage 2d8 + 3}) piercing damage while enlarged."
+					]
+				},
+				{
+					"name": "Javelin",
+					"entries": [
+						"{@atk mw,rw} {@hit 5} to hit, reach 5 ft. or range 30/120 ft., one target. {@h}6 ({@damage 1d6 + 3}) piercing damage, or 10 ({@damage 2d6 + 3}) piercing damage while enlarged."
+					]
+				},
+				{
+					"name": "Invisibility (Recharges after a Short or Long Rest)",
+					"entries": [
+						"The duergar magically turns {@condition invisible} until it attacks, casts a spell, or uses its Enlarge, or until its {@status concentration} is broken, up to 1 hour (as if {@status concentration||concentrating} on a spell). Any equipment the duergar wears or carries is {@condition invisible} with it."
+					]
+				},
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit +5} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}5 ({@damage 1d4 + 3}) Piercing damage."
+					]
+				}
+			],
+			"environment": [
+				"underdark"
+			],
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/duergar.mp3"
+			},
+			"attachedItems": [
+				"dagger|phb",
+				"javelin|phb",
+				"war pick|phb"
+			],
+			"traitTags": [
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"languageTags": [
+				"C",
+				"D",
+				"U"
+			],
+			"miscTags": [
+				"MW",
+				"MLW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"invisible"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "Duergar",
+				"source": "MM"
+			},
+			"fluff": {
+				"name": "Duergar",
+				"source": "MM",
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							{
+								"type": "entries",
+								"entries": [
+									"The tyrannical duergar, also known as gray dwarves, dwell in fantastic cities deep in the Underdark. Using ancient dwarven knowledge and myriad slaves, they work tirelessly to expand their subterranean kingdoms.",
+									"Most duergar (including females) are bald and have ashen gray skin. They wear drab clothing designed to blend in with stone, along with simple jewelry that reflects their severe and utilitarian demeanor.",
+									{
+										"name": "Slaves to Slavers",
+										"type": "entries",
+										"entries": [
+											"The duergar were once dwarves, before their greed and endless delving beneath the earth brought them into contact with the mind flayers. Held in captivity for generations by the illithids, the dwarves eventually won their independence with the aid of the evil god Laduguer. Slavery had forever changed them, however, darkening their spirits to make the duergar as evil as the tyrants they had escaped. Despite winning their freedom, duergar are dour, pessimistic, untrusting creatures, always toiling and complaining, with no memory of what it means to be happy or proud. Their craftsmanship and accomplishments endure, yet they are bereft of warmth or artistry.",
+											"Duergar make war against their dwarven kin and all other subterranean races. They forge alliances when it is convenient, then break those alliances when they have nothing more to gain. They take and hold slaves to toil in the Underdark, regarding them as free labor and crude currency."
+										]
+									},
+									{
+										"name": "Tough as Stone",
+										"type": "entries",
+										"entries": [
+											"Like dwarves, duergar have strong constitutions. Adding to their physical stamina is an incredible mental fortitude resulting from their time as slaves of the illithids. A duergar's mind is a fortress, able to shrug off charms, illusions, and other spells."
+										]
+									},
+									{
+										"name": "Born of Darkness",
+										"type": "entries",
+										"entries": [
+											"The Underdark is saturated with strange magical power, which the duergar absorbed over generations of imprisonment. A duergar can increase its size and strength for a short time, becoming a powerful ogre-sized warrior. If it faces a foe it can't fight, or when spying on creatures approaching its territory, it can just as easily become {@condition invisible} to slip away into the darkness. Eons spent in the Underdark also sharpened their {@sense darkvision}, allowing them to see twice as far as other dwarves. This keen eyesight comes at a cost, however, as a duergar's vision is compromised by sunlight."
+										]
+									},
+									{
+										"name": "Infernal Master",
+										"type": "entries",
+										"entries": [
+											"Asmodeus, Lord of the Nine Hells, has been known to impersonate duergar gods in order to cultivate the evil brimming in the hearts of the gray dwarves. He offers them divine guidance and vengeance against their enemies while urging them on toward greater acts of tyranny, all the while concealing his true identity."
+										]
+									}
+								]
+							}
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/MM/Duergar.webp"
+						},
+						"credit": "Jasper Sandner"
+					}
+				]
+			},
+			"shortName": "Hjolgron",
+			"level": 4,
+			"save": {
+				"dex": "+2"
+			},
+			"skill": {
+				"athletics": "+7",
+				"insight": "+2",
+				"perception": "+2",
+				"sleight of hand": "+2",
+				"stealth": "+4"
+			},
+			"isNamedCreature": true,
+			"bonus": [
+				{
+					"name": "Expert",
+					"entries": [
+						"{@i {@action Help} (Helpful); {@action Dash}, {@action Disengage}, {@action Dodge} (Cunning Action)}"
+					]
+				}
+			],
+			"damageTags": [
+				"P"
+			]
+		}
+	]
+}
