@@ -95,7 +95,7 @@
 				"entries": [
 					"\"Ye think yerself a great hero because ye've killed great monsters with that axe? Ye may have great strength, but if all ye can do is kill, then ye'll never bring peace to these lands. We'll see if ye can quell violence or if ye'll only feed the echo of Death its next meal.\"",
 					"- Thrain Deepdelve, Keeper of the Stone Listeners' Histories",
-					"Death Echoes are the restless shades of those who perished in frenzied bloodshed, their forms now mere whispers of black and gray: a silhouette or shadow pierced only by eyes aglow with crimson, amber, or sapphire malice. Reborn in places of shadow where battle and death once swelled, they hunger for the chaos of mortal strife, their spectral blades slashing at anything nearby with desperate fervor. So long as they are feeding on the fumes of violence, each “death” fuels their curse, knitting their essence back together, stronger and more relentless, mocking the finality of the grave while embodying its inevitable embrace for their prey. Though they will attack mortals and undead alike, they crave mortal strife and death above all, always seeking combat with the living where they can be found.",
+					"Death Echoes are the restless shades of those who perished in frenzied bloodshed, their forms now mere whispers of black and gray: a silhouette or shadow pierced only by eyes aglow with crimson, amber, or sapphire malice. Reborn in places of shadow where battle and death once swelled, they hunger for the chaos of mortal strife, their spectral blades slashing at anything nearby with desperate fervor. So long as they are feeding on the fumes of violence, each \u201cdeath\u201d fuels their curse, knitting their essence back together, stronger and more relentless, mocking the finality of the grave while embodying its inevitable embrace for their prey. Though they will attack mortals and undead alike, they crave mortal strife and death above all, always seeking combat with the living where they can be found.",
 					"Yet their unnatural existence is fragile, tethered to violence. Deny them the clash of steel or the spill of blood, and they unravel, fading into the void with a mournful wail. In desperation, they may turn their blades on each other in vain, a pitiful echo of their former selves clinging to the fray before inevitably returning to the pits from which they came."
 				],
 				"images": [
@@ -168,23 +168,593 @@
 				{
 					"name": "Aura of Death's Call",
 					"entries": [
-						"The death echo emanates an aura within 10 feet of it that entices those within it to send each other to Death’s embrace. Whenever the aura enters a creature's space and whenever a creature enters the aura or ends its turn there, that creature must make a {@bold {@dc 13} [+ # of times amplified]} Wisdom saving throw (unless the creature is immune to the {@condition charmed} condition). On a failure, the creature must use its reaction (if available) to attack one creature of its choice with a weapon, unarmed strike, or a cantrip. If the creature is unable to do so, it instead takes ({@damage #$prompt_number:min=1,title=Amplified _ times,default=1$#d4|[# of times amplified]d4} +) {@damage 1d4} psychic damage."
+						"The death echo emanates an aura within 10 feet of it that entices those within it to send each other to Death\u2019s embrace. Whenever the aura enters a creature's space and whenever a creature enters the aura or ends its turn there, that creature must make a {@bold {@dc 13} [+ # of times amplified]} Wisdom saving throw (unless the creature is immune to the {@condition charmed} condition). On a failure, the creature must use its reaction (if available) to attack one creature of its choice with a weapon, unarmed strike, or a cantrip. If the creature is unable to do so, it instead takes ({@damage #$prompt_number:min=1,title=Amplified _ times,default=1$#d4|[# of times amplified]d4} +) {@damage 1d4} psychic damage."
 					]
 				},
 				{
 					"name": "Deadly Hunger",
 					"entries": [
-						"The death echo needs violence and death to sustain itself. At the end of each round, if the death echo didn’t take the attack action and didn’t take damage from an attack or spell during that round, then it loses 3 hit points."
+						"The death echo needs violence and death to sustain itself. At the end of each round, if the death echo didn\u2019t take the attack action and didn\u2019t take damage from an attack or spell during that round, then it loses 3 hit points."
 					]
 				},
 				{
 					"name": "Amplified Echo",
 					"entries": [
 						"When the death echo drops to 0 hit points from damage, if it took the Attack action or was damaged by an attack or spell within the last round, then at the end of the current turn, it regains all its hit points, and its hit point maximum increases by 3. Also, the following each increase by 1:",
-						"• Armor Class",
-						"• The DC of its Aura of Death's Call",
-						"• The number of dice rolled for damage from its attacks and traits",
-						"• The \"to hit\" modifier of its attacks"
+						"\u2022 Armor Class",
+						"\u2022 The DC of its Aura of Death's Call",
+						"\u2022 The number of dice rolled for damage from its attacks and traits",
+						"\u2022 The \"to hit\" modifier of its attacks"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Spectral Blade",
+					"entries": [
+						"{@atk mw} {@hit 5} (or {@hit 5+#$prompt_number:min=0,title=Amplified _ times,default=0$#|+5+[# of times amplified]}) to hit, reach 5 ft., one target. {@h} ({@damage #$prompt_number:min=1,title=Amplified _ times,default=1$#d4|[# of times amplified]d4} +) {@damage 1d4 + 3} necrotic damage."
+					]
+				},
+				{
+					"name": "Concussive Screech",
+					"entries": [
+						"{@atk rs} {@hit 5} (or {@hit 5+#$prompt_number:min=0,title=Amplified _ times,default=0$#|+5+[# of times amplified]}) to hit, range 90 ft., one target. {@h} ({@damage #$prompt_number:min=1,title=Amplified _ times,default=1$#d4|[# of times amplified]d4} +) {@damage 1d4} thunder damage."
+					]
+				}
+			],
+			"miscTags": [
+				"MW",
+				"RA"
+			]
+		},
+		{
+			"name": "Death Echo (Amped 1x)",
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"source": "TheGamesofAlterion",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"condition": ""
+				}
+			],
+			"hp": {
+				"special": "13 (2d8 + 4)"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 13,
+			"dex": 17,
+			"con": 12,
+			"int": 7,
+			"wis": 9,
+			"cha": 10,
+			"passive": 9,
+			"shortName": true,
+			"cr": "2",
+			"senses": [
+				"blindsight 60 ft."
+			],
+			"senseTags": [
+				"B"
+			],
+			"languages": [
+				"Understands all languages it knew in life but can't speak."
+			],
+			"languageTags": [
+				"CS",
+				"LF"
+			],
+			"save": {
+				"str": "+3"
+			},
+			"resist": [
+				{
+					"resist": [
+						{
+							"resist": [
+								"bludgeoning",
+								"piercing",
+								"slashing"
+							]
+						}
+					],
+					"note": "from Nonmagical Attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"necrotic",
+				"thunder"
+			],
+			"conditionImmune": [
+				"blinded",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"poisoned"
+			],
+			"fluff": {
+				"entries": [
+					"\"Ye think yerself a great hero because ye've killed great monsters with that axe? Ye may have great strength, but if all ye can do is kill, then ye'll never bring peace to these lands. We'll see if ye can quell violence or if ye'll only feed the echo of Death its next meal.\"",
+					"- Thrain Deepdelve, Keeper of the Stone Listeners' Histories",
+					"Death Echoes are the restless shades of those who perished in frenzied bloodshed, their forms now mere whispers of black and gray: a silhouette or shadow pierced only by eyes aglow with crimson, amber, or sapphire malice. Reborn in places of shadow where battle and death once swelled, they hunger for the chaos of mortal strife, their spectral blades slashing at anything nearby with desperate fervor. So long as they are feeding on the fumes of violence, each \u201cdeath\u201d fuels their curse, knitting their essence back together, stronger and more relentless, mocking the finality of the grave while embodying its inevitable embrace for their prey. Though they will attack mortals and undead alike, they crave mortal strife and death above all, always seeking combat with the living where they can be found.",
+					"Yet their unnatural existence is fragile, tethered to violence. Deny them the clash of steel or the spill of blood, and they unravel, fading into the void with a mournful wail. In desperation, they may turn their blades on each other in vain, a pitiful echo of their former selves clinging to the fray before inevitably returning to the pits from which they came."
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://raw.githubusercontent.com/mathewrosssmith/mathewrosssmith.github.io/refs/heads/master/DnD%20Assets/Monsters/Death%20Echo%20-%20Blade.JPG"
+						}
+					},
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://raw.githubusercontent.com/mathewrosssmith/mathewrosssmith.github.io/refs/heads/master/DnD%20Assets/Monsters/Death%20Echo%20-%20Blade%20(token).png"
+						}
+					},
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://raw.githubusercontent.com/mathewrosssmith/mathewrosssmith.github.io/refs/heads/master/DnD%20Assets/Monsters/Death%20Echo%20-%20Robe.JPG"
+						}
+					},
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://raw.githubusercontent.com/mathewrosssmith/mathewrosssmith.github.io/refs/heads/master/DnD%20Assets/Monsters/Death%20Echo%20-%20Robe%20(token).png"
+						}
+					},
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://raw.githubusercontent.com/mathewrosssmith/mathewrosssmith.github.io/refs/heads/master/DnD%20Assets/Monsters/Death%20Echo%20-%20Armor.JPG"
+						}
+					},
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://raw.githubusercontent.com/mathewrosssmith/mathewrosssmith.github.io/refs/heads/master/DnD%20Assets/Monsters/Death%20Echo%20-%20Armor%20(token).png"
+						}
+					}
+				]
+			},
+			"tokenHref": {
+				"type": "external",
+				"url": "https://raw.githubusercontent.com/mathewrosssmith/mathewrosssmith.github.io/refs/heads/master/DnD%20Assets/Monsters/Death%20Echo%20-%20Blade%20(token).png"
+			},
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"The Death Echo can cast the following spells, ignoring all material or verbal components but always requiring a somatic component."
+					],
+					"daily": {
+						"1": [
+							"{@spell misty step|XPHB}"
+						]
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"trait": [
+				{
+					"name": "Aura of Death's Call",
+					"entries": [
+						"The death echo emanates an aura within 10 feet of it that entices those within it to send each other to Death\u2019s embrace. Whenever the aura enters a creature's space and whenever a creature enters the aura or ends its turn there, that creature must make a {@bold {@dc 13+1}} Wisdom saving throw (unless the creature is immune to the {@condition charmed} condition). On a failure, the creature must use its reaction (if available) to attack one creature of its choice with a weapon, unarmed strike, or a cantrip. If the creature is unable to do so, it instead takes ({@damage 1d4|1d4} +) {@damage 1d4} psychic damage."
+					]
+				},
+				{
+					"name": "Deadly Hunger",
+					"entries": [
+						"The death echo needs violence and death to sustain itself. At the end of each round, if the death echo didn\u2019t take the attack action and didn\u2019t take damage from an attack or spell during that round, then it loses 3 hit points."
+					]
+				},
+				{
+					"name": "Amplified Echo",
+					"entries": [
+						"When the death echo drops to 0 hit points from damage, if it took the Attack action or was damaged by an attack or spell within the last round, then at the end of the current turn, it regains all its hit points, and its hit point maximum increases by 3. Also, the following each increase by 1:",
+						"\u2022 Armor Class",
+						"\u2022 The DC of its Aura of Death's Call",
+						"\u2022 The number of dice rolled for damage from its attacks and traits",
+						"\u2022 The \"to hit\" modifier of its attacks"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Spectral Blade",
+					"entries": [
+						"{@atk mw} {@hit 5} (or {@hit 5+#$prompt_number:min=0,title=Amplified _ times,default=0$#|+5+[# of times amplified]}) to hit, reach 5 ft., one target. {@h} ({@damage #$prompt_number:min=1,title=Amplified _ times,default=1$#d4|[# of times amplified]d4} +) {@damage 1d4 + 3} necrotic damage."
+					]
+				},
+				{
+					"name": "Concussive Screech",
+					"entries": [
+						"{@atk rs} {@hit 5} (or {@hit 5+#$prompt_number:min=0,title=Amplified _ times,default=0$#|+5+[# of times amplified]}) to hit, range 90 ft., one target. {@h} ({@damage #$prompt_number:min=1,title=Amplified _ times,default=1$#d4|[# of times amplified]d4} +) {@damage 1d4} thunder damage."
+					]
+				}
+			],
+			"miscTags": [
+				"MW",
+				"RA"
+			]
+		},
+		{
+			"name": "Death Echo (Amped 2x)",
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"source": "TheGamesofAlterion",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"condition": ""
+				}
+			],
+			"hp": {
+				"special": "16 (2d8 + 7)"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 13,
+			"dex": 17,
+			"con": 12,
+			"int": 7,
+			"wis": 9,
+			"cha": 10,
+			"passive": 9,
+			"shortName": true,
+			"cr": "2",
+			"senses": [
+				"blindsight 60 ft."
+			],
+			"senseTags": [
+				"B"
+			],
+			"languages": [
+				"Understands all languages it knew in life but can't speak."
+			],
+			"languageTags": [
+				"CS",
+				"LF"
+			],
+			"save": {
+				"str": "+3"
+			},
+			"resist": [
+				{
+					"resist": [
+						{
+							"resist": [
+								"bludgeoning",
+								"piercing",
+								"slashing"
+							]
+						}
+					],
+					"note": "from Nonmagical Attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"necrotic",
+				"thunder"
+			],
+			"conditionImmune": [
+				"blinded",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"poisoned"
+			],
+			"fluff": {
+				"entries": [
+					"\"Ye think yerself a great hero because ye've killed great monsters with that axe? Ye may have great strength, but if all ye can do is kill, then ye'll never bring peace to these lands. We'll see if ye can quell violence or if ye'll only feed the echo of Death its next meal.\"",
+					"- Thrain Deepdelve, Keeper of the Stone Listeners' Histories",
+					"Death Echoes are the restless shades of those who perished in frenzied bloodshed, their forms now mere whispers of black and gray: a silhouette or shadow pierced only by eyes aglow with crimson, amber, or sapphire malice. Reborn in places of shadow where battle and death once swelled, they hunger for the chaos of mortal strife, their spectral blades slashing at anything nearby with desperate fervor. So long as they are feeding on the fumes of violence, each \u201cdeath\u201d fuels their curse, knitting their essence back together, stronger and more relentless, mocking the finality of the grave while embodying its inevitable embrace for their prey. Though they will attack mortals and undead alike, they crave mortal strife and death above all, always seeking combat with the living where they can be found.",
+					"Yet their unnatural existence is fragile, tethered to violence. Deny them the clash of steel or the spill of blood, and they unravel, fading into the void with a mournful wail. In desperation, they may turn their blades on each other in vain, a pitiful echo of their former selves clinging to the fray before inevitably returning to the pits from which they came."
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://raw.githubusercontent.com/mathewrosssmith/mathewrosssmith.github.io/refs/heads/master/DnD%20Assets/Monsters/Death%20Echo%20-%20Blade.JPG"
+						}
+					},
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://raw.githubusercontent.com/mathewrosssmith/mathewrosssmith.github.io/refs/heads/master/DnD%20Assets/Monsters/Death%20Echo%20-%20Blade%20(token).png"
+						}
+					},
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://raw.githubusercontent.com/mathewrosssmith/mathewrosssmith.github.io/refs/heads/master/DnD%20Assets/Monsters/Death%20Echo%20-%20Robe.JPG"
+						}
+					},
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://raw.githubusercontent.com/mathewrosssmith/mathewrosssmith.github.io/refs/heads/master/DnD%20Assets/Monsters/Death%20Echo%20-%20Robe%20(token).png"
+						}
+					},
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://raw.githubusercontent.com/mathewrosssmith/mathewrosssmith.github.io/refs/heads/master/DnD%20Assets/Monsters/Death%20Echo%20-%20Armor.JPG"
+						}
+					},
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://raw.githubusercontent.com/mathewrosssmith/mathewrosssmith.github.io/refs/heads/master/DnD%20Assets/Monsters/Death%20Echo%20-%20Armor%20(token).png"
+						}
+					}
+				]
+			},
+			"tokenHref": {
+				"type": "external",
+				"url": "https://raw.githubusercontent.com/mathewrosssmith/mathewrosssmith.github.io/refs/heads/master/DnD%20Assets/Monsters/Death%20Echo%20-%20Blade%20(token).png"
+			},
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"The Death Echo can cast the following spells, ignoring all material or verbal components but always requiring a somatic component."
+					],
+					"daily": {
+						"1": [
+							"{@spell misty step|XPHB}"
+						]
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"trait": [
+				{
+					"name": "Aura of Death's Call",
+					"entries": [
+						"The death echo emanates an aura within 10 feet of it that entices those within it to send each other to Death\u2019s embrace. Whenever the aura enters a creature's space and whenever a creature enters the aura or ends its turn there, that creature must make a {@bold {@dc 13+2}} Wisdom saving throw (unless the creature is immune to the {@condition charmed} condition). On a failure, the creature must use its reaction (if available) to attack one creature of its choice with a weapon, unarmed strike, or a cantrip. If the creature is unable to do so, it instead takes ({@damage 2d4|2d4} +) {@damage 1d4} psychic damage."
+					]
+				},
+				{
+					"name": "Deadly Hunger",
+					"entries": [
+						"The death echo needs violence and death to sustain itself. At the end of each round, if the death echo didn\u2019t take the attack action and didn\u2019t take damage from an attack or spell during that round, then it loses 3 hit points."
+					]
+				},
+				{
+					"name": "Amplified Echo",
+					"entries": [
+						"When the death echo drops to 0 hit points from damage, if it took the Attack action or was damaged by an attack or spell within the last round, then at the end of the current turn, it regains all its hit points, and its hit point maximum increases by 3. Also, the following each increase by 1:",
+						"\u2022 Armor Class",
+						"\u2022 The DC of its Aura of Death's Call",
+						"\u2022 The number of dice rolled for damage from its attacks and traits",
+						"\u2022 The \"to hit\" modifier of its attacks"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Spectral Blade",
+					"entries": [
+						"{@atk mw} {@hit 5} (or {@hit 5+#$prompt_number:min=0,title=Amplified _ times,default=0$#|+5+[# of times amplified]}) to hit, reach 5 ft., one target. {@h} ({@damage #$prompt_number:min=1,title=Amplified _ times,default=1$#d4|[# of times amplified]d4} +) {@damage 1d4 + 3} necrotic damage."
+					]
+				},
+				{
+					"name": "Concussive Screech",
+					"entries": [
+						"{@atk rs} {@hit 5} (or {@hit 5+#$prompt_number:min=0,title=Amplified _ times,default=0$#|+5+[# of times amplified]}) to hit, range 90 ft., one target. {@h} ({@damage #$prompt_number:min=1,title=Amplified _ times,default=1$#d4|[# of times amplified]d4} +) {@damage 1d4} thunder damage."
+					]
+				}
+			],
+			"miscTags": [
+				"MW",
+				"RA"
+			]
+		},
+		{
+			"name": "Death Echo (Amped 3x)",
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"source": "TheGamesofAlterion",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"condition": ""
+				}
+			],
+			"hp": {
+				"special": "19 (2d8 + 10)"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 13,
+			"dex": 17,
+			"con": 12,
+			"int": 7,
+			"wis": 9,
+			"cha": 10,
+			"passive": 9,
+			"shortName": true,
+			"cr": "2",
+			"senses": [
+				"blindsight 60 ft."
+			],
+			"senseTags": [
+				"B"
+			],
+			"languages": [
+				"Understands all languages it knew in life but can't speak."
+			],
+			"languageTags": [
+				"CS",
+				"LF"
+			],
+			"save": {
+				"str": "+3"
+			},
+			"resist": [
+				{
+					"resist": [
+						{
+							"resist": [
+								"bludgeoning",
+								"piercing",
+								"slashing"
+							]
+						}
+					],
+					"note": "from Nonmagical Attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"necrotic",
+				"thunder"
+			],
+			"conditionImmune": [
+				"blinded",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"poisoned"
+			],
+			"fluff": {
+				"entries": [
+					"\"Ye think yerself a great hero because ye've killed great monsters with that axe? Ye may have great strength, but if all ye can do is kill, then ye'll never bring peace to these lands. We'll see if ye can quell violence or if ye'll only feed the echo of Death its next meal.\"",
+					"- Thrain Deepdelve, Keeper of the Stone Listeners' Histories",
+					"Death Echoes are the restless shades of those who perished in frenzied bloodshed, their forms now mere whispers of black and gray: a silhouette or shadow pierced only by eyes aglow with crimson, amber, or sapphire malice. Reborn in places of shadow where battle and death once swelled, they hunger for the chaos of mortal strife, their spectral blades slashing at anything nearby with desperate fervor. So long as they are feeding on the fumes of violence, each \u201cdeath\u201d fuels their curse, knitting their essence back together, stronger and more relentless, mocking the finality of the grave while embodying its inevitable embrace for their prey. Though they will attack mortals and undead alike, they crave mortal strife and death above all, always seeking combat with the living where they can be found.",
+					"Yet their unnatural existence is fragile, tethered to violence. Deny them the clash of steel or the spill of blood, and they unravel, fading into the void with a mournful wail. In desperation, they may turn their blades on each other in vain, a pitiful echo of their former selves clinging to the fray before inevitably returning to the pits from which they came."
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://raw.githubusercontent.com/mathewrosssmith/mathewrosssmith.github.io/refs/heads/master/DnD%20Assets/Monsters/Death%20Echo%20-%20Blade.JPG"
+						}
+					},
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://raw.githubusercontent.com/mathewrosssmith/mathewrosssmith.github.io/refs/heads/master/DnD%20Assets/Monsters/Death%20Echo%20-%20Blade%20(token).png"
+						}
+					},
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://raw.githubusercontent.com/mathewrosssmith/mathewrosssmith.github.io/refs/heads/master/DnD%20Assets/Monsters/Death%20Echo%20-%20Robe.JPG"
+						}
+					},
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://raw.githubusercontent.com/mathewrosssmith/mathewrosssmith.github.io/refs/heads/master/DnD%20Assets/Monsters/Death%20Echo%20-%20Robe%20(token).png"
+						}
+					},
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://raw.githubusercontent.com/mathewrosssmith/mathewrosssmith.github.io/refs/heads/master/DnD%20Assets/Monsters/Death%20Echo%20-%20Armor.JPG"
+						}
+					},
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://raw.githubusercontent.com/mathewrosssmith/mathewrosssmith.github.io/refs/heads/master/DnD%20Assets/Monsters/Death%20Echo%20-%20Armor%20(token).png"
+						}
+					}
+				]
+			},
+			"tokenHref": {
+				"type": "external",
+				"url": "https://raw.githubusercontent.com/mathewrosssmith/mathewrosssmith.github.io/refs/heads/master/DnD%20Assets/Monsters/Death%20Echo%20-%20Blade%20(token).png"
+			},
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"The Death Echo can cast the following spells, ignoring all material or verbal components but always requiring a somatic component."
+					],
+					"daily": {
+						"1": [
+							"{@spell misty step|XPHB}"
+						]
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"trait": [
+				{
+					"name": "Aura of Death's Call",
+					"entries": [
+						"The death echo emanates an aura within 10 feet of it that entices those within it to send each other to Death\u2019s embrace. Whenever the aura enters a creature's space and whenever a creature enters the aura or ends its turn there, that creature must make a {@bold {@dc 13+3}} Wisdom saving throw (unless the creature is immune to the {@condition charmed} condition). On a failure, the creature must use its reaction (if available) to attack one creature of its choice with a weapon, unarmed strike, or a cantrip. If the creature is unable to do so, it instead takes ({@damage 3d4|3d4} +) {@damage 1d4} psychic damage."
+					]
+				},
+				{
+					"name": "Deadly Hunger",
+					"entries": [
+						"The death echo needs violence and death to sustain itself. At the end of each round, if the death echo didn\u2019t take the attack action and didn\u2019t take damage from an attack or spell during that round, then it loses 3 hit points."
+					]
+				},
+				{
+					"name": "Amplified Echo",
+					"entries": [
+						"When the death echo drops to 0 hit points from damage, if it took the Attack action or was damaged by an attack or spell within the last round, then at the end of the current turn, it regains all its hit points, and its hit point maximum increases by 3. Also, the following each increase by 1:",
+						"\u2022 Armor Class",
+						"\u2022 The DC of its Aura of Death's Call",
+						"\u2022 The number of dice rolled for damage from its attacks and traits",
+						"\u2022 The \"to hit\" modifier of its attacks"
 					]
 				}
 			],
